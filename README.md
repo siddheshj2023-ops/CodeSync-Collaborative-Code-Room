@@ -1,43 +1,112 @@
-# CodeSync — Real-Time Collaborative Code Room
+# 🚀 CodeSync — Real-Time Collaborative Code Room
 
-A full-stack collaborative coding workspace built with React, Vite, Monaco Editor, Node.js, Express and Socket.IO.
+A real-time collaborative coding platform where developers can join shared rooms, write code together, chat, and execute programs online.
 
-## Features
-- Create or join rooms using a room ID
-- Live shared code editing across connected browsers
-- Live room chat and participant count
-- Language selection and syntax highlighting
-- Copy room ID and share it with collaborators
-- Responsive dark developer-focused interface
+🔴 **Live Demo:** [https://codesync-vercel-deployment.vercel.app/](https://codesync-vercel-deployment.vercel.app/)
 
-## Run locally
-Requires Node.js 18+.
+## ✨ Features
 
-### 1. Install frontend dependencies
+- 👥 **Collaborative Rooms** — Create a room or join with a room ID.
+- ⚡ **Real-Time Code Synchronization** — Collaborate with other users in the same room.
+- 💬 **Live Chat** — Communicate with teammates inside the coding workspace.
+- 🧑‍💻 **Code Editor** — Write and edit code with syntax highlighting.
+- ▶️ **Online Code Execution** — Run supported programs and view their output.
+- 🌐 **Deployed Application** — Frontend hosted on Vercel and backend hosted on Render.
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+- React
+- Vite
+- Monaco Editor
+- Socket.IO Client
+- CSS
+
+**Backend**
+
+- Node.js
+- Express.js
+- Socket.IO
+- Judge0 API for code execution
+
+## 💻 Supported Languages
+
+- JavaScript
+- Python
+- Java
+- C++
+
+The editor also includes syntax highlighting for additional languages.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+- Git installed
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/siddheshj2023-ops/CodeSync-Collaborative-Code-Room.git
+cd CodeSync-Collaborative-Code-Room
+```
+
+### 2. Install frontend dependencies
+
 ```bash
 npm install
 ```
 
-### 2. Install backend dependencies
+### 3. Configure and start the backend
+
 ```bash
 cd server
 npm install
-cd ..
 ```
 
-### 3. Start backend (terminal 1)
+Create a `.env` file inside the `server` directory:
+
+```env
+PORT=4000
+CLIENT_ORIGIN=http://localhost:5173
+JUDGE0_URL=https://ce.judge0.com
+```
+
+Start the backend:
+
 ```bash
-npm run server
+node server.js
 ```
 
-### 4. Start frontend (terminal 2)
+### 4. Start the frontend
+
+Open a second terminal in the project root directory and run:
+
 ```bash
 npm run dev
 ```
-Open the Vite URL (usually http://localhost:5173) in two browser windows. Enter the same room ID in both to collaborate.
 
-## Deployment
-Deploy the frontend as a Vite static site and the backend as a persistent Node web service. Set `VITE_SERVER_URL` in the frontend build environment to the deployed backend URL, and set `CLIENT_ORIGIN` on the backend to the deployed frontend origin. For local use, defaults are configured.
+Open the local URL shown by Vite in your terminal.
 
-## Note
-This is a learning/portfolio project. Code execution, authentication, durable database storage, and advanced conflict-free concurrent editing are not included in this starter version. Do not execute untrusted code on the server.
+## 🌐 Live Deployment
+
+- **Frontend:** [Vercel Live Demo](https://codesync-vercel-deployment.vercel.app/)
+- **Backend:** [Render Backend](https://codesync-collaborative-code-room-4.onrender.com/)
+
+The backend health endpoint is available at `/health`.
+
+## 🎯 Project Goals
+
+CodeSync demonstrates practical full-stack development concepts, including real-time communication, shared application state, API integration, collaborative editing, and deployment.
+
+## 👨‍💻 Author
+
+**Siddhesh**
+
+GitHub: [siddheshj2023-ops](https://github.com/siddheshj2023-ops)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
